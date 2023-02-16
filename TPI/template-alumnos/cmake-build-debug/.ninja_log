@@ -1,0 +1,25 @@
+# ninja log v5
+18	2393	6761686403117400	CMakeFiles/tpi.dir/auxiliares.obj	98f79eca21f5f997
+58	3277	6761686408143950	CMakeFiles/tpi.dir/main.obj	712dd79dd49f6563
+104	3618	6761686414073216	CMakeFiles/tpi.dir/testEnunciado/construirGrillaTEST.obj	7880eb7ce154ecab
+38	3841	6761686417070720	CMakeFiles/tpi.dir/ejercicios.obj	ccfc512d62b78e86
+200	3899	6761686418412221	CMakeFiles/tpi.dir/testEnunciado/distanciaTotalTEST.obj	f3e4668a7d72ec57
+131	4103	6761686420785864	CMakeFiles/tpi.dir/testEnunciado/corregirViajeTEST.obj	2653bb55e76685d2
+155	4128	6761686421095040	CMakeFiles/tpi.dir/testEnunciado/excesoDeVelocidadTEST.obj	adeb084907ee11ce
+225	4196	6761686421843054	CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.obj	d2602adfee635286
+83	4208	6761686422012593	CMakeFiles/tpi.dir/testEnunciado/cantidadDeSaltosTEST.obj	436af446629e85ba
+178	4267	6761686422601009	CMakeFiles/tpi.dir/testEnunciado/flotaTEST.obj	e5f48be3edf337b6
+3619	5429	6761686434240682	lib/googletest-master/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	a380b4645ce8eef3
+2398	5622	6761686436165531	CMakeFiles/tpi.dir/testEnunciado/tiempoTotalTEST.obj	3c6bddeafed9148e
+3278	10372	6761686483601865	lib/googletest-master/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	7cec353cb691e0f0
+10374	12422	6761686504184530	lib/googletest-master/googlemock/gtest/libgtestd.a	829ee7deb282ccb2
+12422	12612	6761686506071837	lib/googletest-master/googlemock/gtest/libgtest_maind.a	9dd3933485fa778
+12612	16450	6761686544363128	../tpi.exe	442280a4c3c41afd
+13	1479	6761687022661743	CMakeFiles/tpi.dir/testEnunciado/recorridoNoCubiertoTEST.obj	d2602adfee635286
+1479	3870	6761687046483287	../tpi.exe	442280a4c3c41afd
+6	1261	6761689770179433	CMakeFiles/tpi.dir/ejercicios.obj	ccfc512d62b78e86
+1261	3400	6761689791509502	../tpi.exe	442280a4c3c41afd
+24	1346	6761697249399517	CMakeFiles/tpi.dir/ejercicios.obj	ccfc512d62b78e86
+1347	4295	6761697278855083	../tpi.exe	442280a4c3c41afd
+10	1378	6761700948603502	CMakeFiles/tpi.dir/ejercicios.obj	ccfc512d62b78e86
+1378	4368	6761700978500810	../tpi.exe	442280a4c3c41afd

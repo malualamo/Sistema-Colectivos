@@ -1,0 +1,176 @@
+        -:    0:Source:D:/malen/Deskpot/TPI/testGrupo/cantidadDeSaltosTESTGP.cpp
+        -:    0:Graph:D:\malen\Deskpot\TPI\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\cantidadDeSaltosTESTGP.gcno
+        -:    0:Data:D:\malen\Deskpot\TPI\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\cantidadDeSaltosTESTGP.gcda
+        -:    0:Runs:1
+        -:    1:#include "../ejercicios.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        -:    7:
+        2:    8:TEST(cantidadDeSaltosTESTGP, saltoEnGrilla){
+        1:    9:    grilla g = construirGrilla(puntoGps(0.0,0.0), puntoGps(-52,52), 4, 2);
+        -:   10:
+        1:   11:    gps p1 = puntoGps(-7, 10);
+        1:   12:    gps p2 = puntoGps(-8, 12);
+        1:   13:    gps p3 = puntoGps(-30, 40);
+        1:   14:    gps p4 = puntoGps(-45, 25);
+        1:   15:    gps p5 = puntoGps(-20, 18);
+        -:   16:
+        -:   17:    viaje v = {medicion(1.5, p1),
+        -:   18:               medicion(1.6, p2),
+        -:   19:               medicion(1.7, p3),
+        -:   20:               medicion(1.8, p4),
+        1:   21:               medicion(1.9, p5)};
+        -:   22:
+       1*:   23:    EXPECT_EQ(cantidadDeSaltos(g,v),2);
+        1:   24:}
+------------------
+_ZN41cantidadDeSaltosTESTGP_saltoEnGrilla_Test8TestBodyEv:
+function _ZN41cantidadDeSaltosTESTGP_saltoEnGrilla_Test8TestBodyEv called 1 returned 100% blocks executed 40%
+        1:    8:TEST(cantidadDeSaltosTESTGP, saltoEnGrilla){
+        1:    9:    grilla g = construirGrilla(puntoGps(0.0,0.0), puntoGps(-52,52), 4, 2);
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    9-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:    9-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+    $$$$$:    9-block  3
+    $$$$$:    9-block  4
+        -:   10:
+        1:   11:    gps p1 = puntoGps(-7, 10);
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12:    gps p2 = puntoGps(-8, 12);
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13:    gps p3 = puntoGps(-30, 40);
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   14:    gps p4 = puntoGps(-45, 25);
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   15:    gps p5 = puntoGps(-20, 18);
+        1:   15-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   16:
+        -:   17:    viaje v = {medicion(1.5, p1),
+        -:   18:               medicion(1.6, p2),
+        -:   19:               medicion(1.7, p3),
+        -:   20:               medicion(1.8, p4),
+        1:   21:               medicion(1.9, p5)};
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   21-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   21-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   21-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   21-block  5
+call   15 returned 1
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+    $$$$$:   21-block  6
+    $$$$$:   21-block  7
+        -:   22:
+       1*:   23:    EXPECT_EQ(cantidadDeSaltos(g,v),2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   23-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   23-block  2
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   23-block  3
+call   12 returned 1
+call   13 returned 1
+call   14 returned 1
+branch 15 taken 0 (fallthrough)
+branch 16 taken 1
+    %%%%%:   23-block  4
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    %%%%%:   23-block  5
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   23-block  6
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   23-block  7
+call   26 never executed
+branch 27 never executed
+branch 28 never executed
+    %%%%%:   23-block  8
+call   29 never executed
+call   30 never executed
+        1:   23-block  9
+call   31 returned 1
+    $$$$$:   23-block 10
+    $$$$$:   23-block 11
+    $$$$$:   23-block 12
+    $$$$$:   23-block 13
+    $$$$$:   23-block 14
+call   32 never executed
+    $$$$$:   23-block 15
+    $$$$$:   23-block 16
+call   33 never executed
+    $$$$$:   23-block 17
+    $$$$$:   23-block 18
+call   34 never executed
+        1:   24:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   24-block  0
+call    2 never executed
+    $$$$$:   24-block  1
+call    3 never executed
+------------------
+_ZN41cantidadDeSaltosTESTGP_saltoEnGrilla_TestC1Ev:
+function _ZN41cantidadDeSaltosTESTGP_saltoEnGrilla_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:    8:TEST(cantidadDeSaltosTESTGP, saltoEnGrilla){
+        1:    8-block  0
+call    0 returned 1
+------------------

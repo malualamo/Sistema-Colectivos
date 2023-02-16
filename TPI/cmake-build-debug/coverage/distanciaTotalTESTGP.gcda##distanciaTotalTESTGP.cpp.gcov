@@ -1,0 +1,144 @@
+        -:    0:Source:D:/malen/Deskpot/TPI/testGrupo/distanciaTotalTESTGP.cpp
+        -:    0:Graph:D:\malen\Deskpot\TPI\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\distanciaTotalTESTGP.gcno
+        -:    0:Data:D:\malen\Deskpot\TPI\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\distanciaTotalTESTGP.gcda
+        -:    0:Runs:1
+        -:    1:#include "../ejercicios.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        2:    7:TEST(distanciaTotalTESTGP, viajeDesordenado){
+        1:    8:    gps p1 = puntoGps(-33, -34);
+        1:    9:    gps p2 = desviarPunto(p1, 500, 2000);
+        1:   10:    gps p3 = desviarPunto(p2, 350, 2000);
+        1:   11:    gps p4 = desviarPunto(p3, 1500, 185);
+        1:   12:    gps p5 = desviarPunto(p4, 270, 1500);
+        -:   13:
+        -:   14:    viaje v = {medicion(1.6, p2),
+        -:   15:               medicion(1.5, p1),
+        -:   16:               medicion(1.7, p3),
+        -:   17:               medicion(1.9, p4),
+        1:   18:               medicion(1.2, p5)};
+        -:   19:
+       2*:   20:    EXPECT_NEAR(distanciaTotal(v), 11.86, 0.01);
+        1:   21:}
+------------------
+_ZN42distanciaTotalTESTGP_viajeDesordenado_Test8TestBodyEv:
+function _ZN42distanciaTotalTESTGP_viajeDesordenado_Test8TestBodyEv called 1 returned 100% blocks executed 43%
+        1:    7:TEST(distanciaTotalTESTGP, viajeDesordenado){
+        1:    8:    gps p1 = puntoGps(-33, -34);
+        1:    8-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:    9:    gps p2 = desviarPunto(p1, 500, 2000);
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10:    gps p3 = desviarPunto(p2, 350, 2000);
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11:    gps p4 = desviarPunto(p3, 1500, 185);
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12:    gps p5 = desviarPunto(p4, 270, 1500);
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   13:
+        -:   14:    viaje v = {medicion(1.6, p2),
+        -:   15:               medicion(1.5, p1),
+        -:   16:               medicion(1.7, p3),
+        -:   17:               medicion(1.9, p4),
+        1:   18:               medicion(1.2, p5)};
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   18-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   18-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   18-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   18-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   18-block  5
+call   15 returned 1
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+    $$$$$:   18-block  6
+    $$$$$:   18-block  7
+        -:   19:
+       2*:   20:    EXPECT_NEAR(distanciaTotal(v), 11.86, 0.01);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   20-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:   20-block  2
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   20-block  3
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:   20-block  4
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    %%%%%:   20-block  5
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:   20-block  6
+call   24 never executed
+call   25 never executed
+        1:   20-block  7
+call   26 returned 1
+    $$$$$:   20-block  8
+    $$$$$:   20-block  9
+call   27 never executed
+    $$$$$:   20-block 10
+    $$$$$:   20-block 11
+call   28 never executed
+    $$$$$:   20-block 12
+    $$$$$:   20-block 13
+call   29 never executed
+        1:   21:}
+call    0 returned 1
+    $$$$$:   21-block  0
+call    1 never executed
+------------------
+_ZN42distanciaTotalTESTGP_viajeDesordenado_TestC1Ev:
+function _ZN42distanciaTotalTESTGP_viajeDesordenado_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:    7:TEST(distanciaTotalTESTGP, viajeDesordenado){
+        1:    7-block  0
+call    0 returned 1
+------------------

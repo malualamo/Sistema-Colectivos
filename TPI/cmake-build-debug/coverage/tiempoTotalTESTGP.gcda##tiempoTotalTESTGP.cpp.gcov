@@ -1,0 +1,274 @@
+        -:    0:Source:D:/malen/Deskpot/TPI/testGrupo/tiempoTotalTESTGP.cpp
+        -:    0:Graph:D:\malen\Deskpot\TPI\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\tiempoTotalTESTGP.gcno
+        -:    0:Data:D:\malen\Deskpot\TPI\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\tiempoTotalTESTGP.gcda
+        -:    0:Runs:1
+        -:    1:#include "../ejercicios.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        -:    7:const gps P = puntoGps(-33.5, -58.89996);
+        -:    8:
+        2:    9:TEST(tiempoTotalTESTGP, tiempoMaxPrimero){
+        -:   10:    viaje v = {medicion(8.1, P),
+        -:   11:               medicion(1.5, P),
+        -:   12:               medicion(1.2, P),
+        -:   13:               medicion(2.2, P),
+        -:   14:               medicion(2.3, P),
+        -:   15:               medicion(5.2, P),
+        -:   16:               medicion(5.4, P),
+        -:   17:               medicion(5.5, P),
+        -:   18:               medicion(7.2, P),
+        1:   19:               medicion(1.9, P)};
+       2*:   20:    EXPECT_DOUBLE_EQ(tiempoTotal(v),6.9);
+        1:   21:}
+------------------
+_ZN39tiempoTotalTESTGP_tiempoMaxPrimero_Test8TestBodyEv:
+function _ZN39tiempoTotalTESTGP_tiempoMaxPrimero_Test8TestBodyEv called 1 returned 100% blocks executed 40%
+        1:    9:TEST(tiempoTotalTESTGP, tiempoMaxPrimero){
+        -:   10:    viaje v = {medicion(8.1, P),
+        -:   11:               medicion(1.5, P),
+        -:   12:               medicion(1.2, P),
+        -:   13:               medicion(2.2, P),
+        -:   14:               medicion(2.3, P),
+        -:   15:               medicion(5.2, P),
+        -:   16:               medicion(5.4, P),
+        -:   17:               medicion(5.5, P),
+        -:   18:               medicion(7.2, P),
+        1:   19:               medicion(1.9, P)};
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   19-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   19-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   19-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   19-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   19-block  5
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   19-block  6
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0 (throw)
+        1:   19-block  7
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:   19-block  8
+call   24 returned 1
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0 (throw)
+        1:   19-block  9
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0 (throw)
+        1:   19-block 10
+call   30 returned 1
+call   31 returned 1
+branch 32 taken 1 (fallthrough)
+branch 33 taken 0 (throw)
+    $$$$$:   19-block 11
+    $$$$$:   19-block 12
+       2*:   20:    EXPECT_DOUBLE_EQ(tiempoTotal(v),6.9);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   20-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:   20-block  2
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   20-block  3
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:   20-block  4
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    %%%%%:   20-block  5
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:   20-block  6
+call   24 never executed
+call   25 never executed
+        1:   20-block  7
+call   26 returned 1
+    $$$$$:   20-block  8
+    $$$$$:   20-block  9
+call   27 never executed
+    $$$$$:   20-block 10
+    $$$$$:   20-block 11
+call   28 never executed
+    $$$$$:   20-block 12
+    $$$$$:   20-block 13
+call   29 never executed
+        1:   21:}
+call    0 returned 1
+    $$$$$:   21-block  0
+call    1 never executed
+------------------
+_ZN39tiempoTotalTESTGP_tiempoMaxPrimero_TestC1Ev:
+function _ZN39tiempoTotalTESTGP_tiempoMaxPrimero_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:    9:TEST(tiempoTotalTESTGP, tiempoMaxPrimero){
+        1:    9-block  0
+call    0 returned 1
+------------------
+        -:   22:
+        2:   23:TEST(tiempoTotalTESTGP, tiempoMinUltimo){
+        -:   24:    viaje v = {medicion(1.9, P),
+        -:   25:               medicion(1.5, P),
+        -:   26:               medicion(1.3, P),
+        -:   27:               medicion(2.2, P),
+        -:   28:               medicion(2.3, P),
+        -:   29:               medicion(5.2, P),
+        -:   30:               medicion(5.4, P),
+        -:   31:               medicion(5.5, P),
+        -:   32:               medicion(7.2, P),
+        1:   33:               medicion(1.2, P)};
+       2*:   34:    EXPECT_DOUBLE_EQ(tiempoTotal(v),6.0);
+        1:   35:}
+------------------
+_ZN38tiempoTotalTESTGP_tiempoMinUltimo_Test8TestBodyEv:
+function _ZN38tiempoTotalTESTGP_tiempoMinUltimo_Test8TestBodyEv called 1 returned 100% blocks executed 40%
+        1:   23:TEST(tiempoTotalTESTGP, tiempoMinUltimo){
+        -:   24:    viaje v = {medicion(1.9, P),
+        -:   25:               medicion(1.5, P),
+        -:   26:               medicion(1.3, P),
+        -:   27:               medicion(2.2, P),
+        -:   28:               medicion(2.3, P),
+        -:   29:               medicion(5.2, P),
+        -:   30:               medicion(5.4, P),
+        -:   31:               medicion(5.5, P),
+        -:   32:               medicion(7.2, P),
+        1:   33:               medicion(1.2, P)};
+        1:   33-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   33-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   33-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   33-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   33-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   33-block  5
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   33-block  6
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0 (throw)
+        1:   33-block  7
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:   33-block  8
+call   24 returned 1
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0 (throw)
+        1:   33-block  9
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0 (throw)
+        1:   33-block 10
+call   30 returned 1
+call   31 returned 1
+branch 32 taken 1 (fallthrough)
+branch 33 taken 0 (throw)
+    $$$$$:   33-block 11
+    $$$$$:   33-block 12
+       2*:   34:    EXPECT_DOUBLE_EQ(tiempoTotal(v),6.0);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   34-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   34-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:   34-block  2
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   34-block  3
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:   34-block  4
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    %%%%%:   34-block  5
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:   34-block  6
+call   24 never executed
+call   25 never executed
+        1:   34-block  7
+call   26 returned 1
+    $$$$$:   34-block  8
+    $$$$$:   34-block  9
+call   27 never executed
+    $$$$$:   34-block 10
+    $$$$$:   34-block 11
+call   28 never executed
+    $$$$$:   34-block 12
+    $$$$$:   34-block 13
+call   29 never executed
+        1:   35:}
+call    0 returned 1
+    $$$$$:   35-block  0
+call    1 never executed
+------------------
+_ZN38tiempoTotalTESTGP_tiempoMinUltimo_TestC1Ev:
+function _ZN38tiempoTotalTESTGP_tiempoMinUltimo_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   23:TEST(tiempoTotalTESTGP, tiempoMinUltimo){
+        1:   23-block  0
+call    0 returned 1
+------------------
+        -:   36:

@@ -1,0 +1,158 @@
+        -:    0:Source:D:/malen/Deskpot/TPI/testGrupo/flotaTESTGP.cpp
+        -:    0:Graph:D:\malen\Deskpot\TPI\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\flotaTESTGP.gcno
+        -:    0:Data:D:\malen\Deskpot\TPI\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\flotaTESTGP.gcda
+        -:    0:Runs:1
+        -:    1:#include "../ejercicios.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:vector<viaje> F1 = {{
+        -:    6:                           medicion(5.5,puntoGps(2.5, 2.89996)),
+        -:    7:                           medicion(6.7,puntoGps(2.5, 2.89997)),
+        -:    8:                           medicion(4.9,puntoGps(2.5, 2.89998))},
+        -:    9:                   {
+        -:   10:                           medicion(5.3,puntoGps(2.5, 2.89996)),
+        -:   11:                           medicion(7.6,puntoGps(2.5, 2.89997)),
+        -:   12:                           medicion(4.7,puntoGps(2.5, 2.89998))},
+        -:   13:                   {
+        -:   14:                           medicion(5.7,puntoGps(2.5, 2.89996)),
+        -:   15:                           medicion(6.6,puntoGps(2.5, 2.89997)),
+        -:   16:                           medicion(4.6,puntoGps(2.5, 2.89998))},
+        -:   17:
+        -:   18:                   {
+        -:   19:                           medicion(6.5,puntoGps(2.5, 2.89996)),
+        -:   20:                           medicion(8.6,puntoGps(2.5, 2.89997)),
+        -:   21:                           medicion(4.7,puntoGps(2.5, 2.89998))},
+        -:   22:};
+        -:   23:
+        2:   24:TEST(flotaTotalTEST, todosDespuesDeFranja){
+       1*:   25:EXPECT_EQ(flota(F1,3.0,4.5),0);
+        1:   26:}
+------------------
+_ZN40flotaTotalTEST_todosDespuesDeFranja_Test8TestBodyEv:
+function _ZN40flotaTotalTEST_todosDespuesDeFranja_Test8TestBodyEv called 1 returned 100% blocks executed 29%
+        1:   24:TEST(flotaTotalTEST, todosDespuesDeFranja){
+       1*:   25:EXPECT_EQ(flota(F1,3.0,4.5),0);
+        1:   25-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   25-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   25-block  3
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:   25-block  4
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   25-block  5
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   25-block  6
+call   19 never executed
+branch 20 never executed
+branch 21 never executed
+    %%%%%:   25-block  7
+call   22 never executed
+branch 23 never executed
+branch 24 never executed
+    %%%%%:   25-block  8
+call   25 never executed
+call   26 never executed
+        1:   25-block  9
+call   27 returned 1
+    $$$$$:   25-block 10
+    $$$$$:   25-block 11
+    $$$$$:   25-block 12
+    $$$$$:   25-block 13
+call   28 never executed
+    $$$$$:   25-block 14
+    $$$$$:   25-block 15
+call   29 never executed
+    $$$$$:   25-block 16
+    $$$$$:   25-block 17
+call   30 never executed
+        1:   26:}
+------------------
+_ZN40flotaTotalTEST_todosDespuesDeFranja_TestC1Ev:
+function _ZN40flotaTotalTEST_todosDespuesDeFranja_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   24:TEST(flotaTotalTEST, todosDespuesDeFranja){
+        1:   24-block  0
+call    0 returned 1
+------------------
+        -:   27:
+        2:   28:TEST(flotaTotalTEST, todosDentro){
+       1*:   29:EXPECT_EQ(flota(F1,5.0,8.5),4);
+        1:   30:}
+------------------
+_ZN31flotaTotalTEST_todosDentro_Test8TestBodyEv:
+function _ZN31flotaTotalTEST_todosDentro_Test8TestBodyEv called 1 returned 100% blocks executed 29%
+        1:   28:TEST(flotaTotalTEST, todosDentro){
+       1*:   29:EXPECT_EQ(flota(F1,5.0,8.5),4);
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   29-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   29-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   29-block  3
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 0 (fallthrough)
+branch 12 taken 1
+    %%%%%:   29-block  4
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    %%%%%:   29-block  5
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    %%%%%:   29-block  6
+call   19 never executed
+branch 20 never executed
+branch 21 never executed
+    %%%%%:   29-block  7
+call   22 never executed
+branch 23 never executed
+branch 24 never executed
+    %%%%%:   29-block  8
+call   25 never executed
+call   26 never executed
+        1:   29-block  9
+call   27 returned 1
+    $$$$$:   29-block 10
+    $$$$$:   29-block 11
+    $$$$$:   29-block 12
+    $$$$$:   29-block 13
+call   28 never executed
+    $$$$$:   29-block 14
+    $$$$$:   29-block 15
+call   29 never executed
+    $$$$$:   29-block 16
+    $$$$$:   29-block 17
+call   30 never executed
+        1:   30:}
+------------------
+_ZN31flotaTotalTEST_todosDentro_TestC1Ev:
+function _ZN31flotaTotalTEST_todosDentro_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   28:TEST(flotaTotalTEST, todosDentro){
+        1:   28-block  0
+call    0 returned 1
+------------------

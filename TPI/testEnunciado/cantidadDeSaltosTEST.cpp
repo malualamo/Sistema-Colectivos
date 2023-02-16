@@ -1,0 +1,36 @@
+#include "../ejercicios.h"
+#include "../auxiliares.h"
+#include "gtest/gtest.h"
+
+using namespace std;
+
+
+TEST(cantidadDeSaltosTEST, todosSaltosOrdenados){
+    grilla g = construirGrilla(puntoGps(0.0,0.0),desviarPunto(puntoGps(0,0), 3000, 3000), 6, 6);
+
+    gps p1 = puntoGps(0, 0);
+    gps p2 = desviarPunto(p1, 2000, 2000);
+    gps p3 = desviarPunto(p1, 100, 100);
+
+    viaje v = {medicion(1.5, p1),
+               medicion(1.6, p2),
+               medicion(1.7, p3)};
+
+    int val = cantidadDeSaltos(g,v);
+    EXPECT_EQ(val,2);
+}
+
+
+TEST(cantidadDeSaltosTEST, algunosSaltosOrdenados){
+    grilla g = construirGrilla(puntoGps(0.0,0.0),desviarPunto(puntoGps(0,0), 3000, 3000),3,3);
+
+    gps p1 = puntoGps(0, 0);
+    gps p2 = desviarPunto(p1, 2500, 2500);
+    gps p3 = desviarPunto(p1, 1200, 1200);
+
+    viaje v = {medicion(1.5, p1),
+               medicion(1.6, p2),
+               medicion(1.7, p3)};
+
+    EXPECT_EQ(cantidadDeSaltos(g,v),1);
+}

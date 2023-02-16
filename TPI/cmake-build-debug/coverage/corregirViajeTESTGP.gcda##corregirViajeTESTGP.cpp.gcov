@@ -1,0 +1,1028 @@
+        -:    0:Source:D:/malen/Deskpot/TPI/testGrupo/corregirViajeTESTGP.cpp
+        -:    0:Graph:D:\malen\Deskpot\TPI\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\corregirViajeTESTGP.gcno
+        -:    0:Data:D:\malen\Deskpot\TPI\cmake-build-debug\CMakeFiles\tpi.dir\testGrupo\corregirViajeTESTGP.gcda
+        -:    0:Runs:1
+        -:    1:#include "../ejercicios.h"
+        -:    2:#include "../auxiliares.h"
+        -:    3:#include "gtest/gtest.h"
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+        -:    7:
+        2:    8:TEST(corregirViajeTESTGP, faltanDos){
+        1:    9:    viaje v = {medicion(T0+0, puntoGps(-34.588910, -58.405075)),
+        1:   10:               medicion(T0+30, puntoGps(22, -155)),
+        1:   11:               medicion(T0+494, puntoGps(-34.563746, -58.436637)),
+        1:   12:               medicion(T0+999, puntoGps(-34.549657, -58.437327)),
+        1:   13:               medicion(T0+92, puntoGps(-34.594553, -58.402426)),
+        1:   14:               medicion(T0+65, puntoGps(-34.590787, -58.402222)),
+        1:   15:               medicion(T0+230, puntoGps(-34.584572, -58.416942)),
+        1:   16:               medicion(T0+873, puntoGps(-34.559236, -58.427499)),
+        1:   17:               medicion(T0+675, puntoGps(-34.578941, -58.424878)),
+        9:   18:               medicion(T0+1051, puntoGps(0, 0))};
+        -:   19:
+        1:   20:    viaje res = {medicion(T0+0, puntoGps(-34.588910, -58.405075)),
+        1:   21:                 medicion(T0+30, puntoGps( -34.589776307692304, -58.403758230769228)),
+        1:   22:                 medicion(T0+494, puntoGps(-34.563746, -58.436637)),
+        1:   23:                 medicion(T0+999, puntoGps(-34.549657, -58.437327)),
+        1:   24:                 medicion(T0+92, puntoGps(-34.594553, -58.402426)),
+        1:   25:                 medicion(T0+65, puntoGps(-34.590787, -58.402222)),
+        1:   26:                 medicion(T0+230, puntoGps(-34.584572, -58.416942)),
+        1:   27:                 medicion(T0+873, puntoGps(-34.559236, -58.427499)),
+        1:   28:                 medicion(T0+675, puntoGps(-34.578941, -58.424878)),
+        9:   29:                 medicion(T0+1051, puntoGps(-34.545704, -58.441383))};
+        1:   30:    vector<tiempo> errores = {T0+30,T0+1051};
+        -:   31:
+        1:   32:    corregirViaje(v, errores);
+       1*:   33:    EXPECT_EQ(v.size(),res.size());
+        -:   34:
+       11:   35:    for (int i = 0; i < res.size(); ++i) {
+      10*:   36:        EXPECT_NEAR(obtenerLatitud(obtenerPosicion(v[i])),
+       10:   37:                    obtenerLatitud(obtenerPosicion(res[i])), 0.00001);
+      10*:   38:        EXPECT_NEAR(obtenerLongitud(obtenerPosicion(v[i])),
+       10:   39:                    obtenerLongitud(obtenerPosicion(res[i])), 0.00001);
+      10*:   40:        EXPECT_EQ(obtenerTiempo(v[i]),obtenerTiempo(res[i]));
+        -:   41:    }
+        1:   42:}
+------------------
+_ZN34corregirViajeTESTGP_faltanDos_Test8TestBodyEv:
+function _ZN34corregirViajeTESTGP_faltanDos_Test8TestBodyEv called 1 returned 100% blocks executed 39%
+        1:    8:TEST(corregirViajeTESTGP, faltanDos){
+        1:    9:    viaje v = {medicion(T0+0, puntoGps(-34.588910, -58.405075)),
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:    9-block  1
+        1:   10:               medicion(T0+30, puntoGps(22, -155)),
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   10-block  1
+        1:   11:               medicion(T0+494, puntoGps(-34.563746, -58.436637)),
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   11-block  1
+        1:   12:               medicion(T0+999, puntoGps(-34.549657, -58.437327)),
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   12-block  1
+        1:   13:               medicion(T0+92, puntoGps(-34.594553, -58.402426)),
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   13-block  1
+        1:   14:               medicion(T0+65, puntoGps(-34.590787, -58.402222)),
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   14-block  1
+        1:   15:               medicion(T0+230, puntoGps(-34.584572, -58.416942)),
+        1:   15-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   15-block  1
+        1:   16:               medicion(T0+873, puntoGps(-34.559236, -58.427499)),
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   16-block  1
+        1:   17:               medicion(T0+675, puntoGps(-34.578941, -58.424878)),
+        1:   17-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   17-block  1
+        9:   18:               medicion(T0+1051, puntoGps(0, 0))};
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   18-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   18-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   18-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   18-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   18-block  5
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   18-block  6
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0 (throw)
+        1:   18-block  7
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:   18-block  8
+call   24 returned 1
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0 (throw)
+        1:   18-block  9
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0 (throw)
+        1:   18-block 10
+call   30 returned 1
+branch 31 taken 1 (fallthrough)
+branch 32 taken 0 (throw)
+        1:   18-block 11
+call   33 returned 1
+call   34 returned 1
+branch 35 taken 1 (fallthrough)
+branch 36 taken 0 (throw)
+    $$$$$:   18-block 12
+    $$$$$:   18-block 13
+    $$$$$:   18-block 14
+        -:   19:
+        1:   20:    viaje res = {medicion(T0+0, puntoGps(-34.588910, -58.405075)),
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   20-block  0
+        1:   21:                 medicion(T0+30, puntoGps( -34.589776307692304, -58.403758230769228)),
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   21-block  1
+        1:   22:                 medicion(T0+494, puntoGps(-34.563746, -58.436637)),
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   22-block  1
+        1:   23:                 medicion(T0+999, puntoGps(-34.549657, -58.437327)),
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   23-block  1
+        1:   24:                 medicion(T0+92, puntoGps(-34.594553, -58.402426)),
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   24-block  1
+        1:   25:                 medicion(T0+65, puntoGps(-34.590787, -58.402222)),
+        1:   25-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   25-block  1
+        1:   26:                 medicion(T0+230, puntoGps(-34.584572, -58.416942)),
+        1:   26-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   26-block  1
+        1:   27:                 medicion(T0+873, puntoGps(-34.559236, -58.427499)),
+        1:   27-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   27-block  1
+        1:   28:                 medicion(T0+675, puntoGps(-34.578941, -58.424878)),
+        1:   28-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   28-block  1
+        9:   29:                 medicion(T0+1051, puntoGps(-34.545704, -58.441383))};
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   29-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   29-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   29-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   29-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   29-block  5
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   29-block  6
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0 (throw)
+        1:   29-block  7
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:   29-block  8
+call   24 returned 1
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0 (throw)
+        1:   29-block  9
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0 (throw)
+        1:   29-block 10
+call   30 returned 1
+branch 31 taken 1 (fallthrough)
+branch 32 taken 0 (throw)
+        1:   29-block 11
+call   33 returned 1
+call   34 returned 1
+branch 35 taken 1 (fallthrough)
+branch 36 taken 0 (throw)
+    $$$$$:   29-block 12
+    $$$$$:   29-block 13
+    $$$$$:   29-block 14
+        1:   30:    vector<tiempo> errores = {T0+30,T0+1051};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   30-block  0
+    $$$$$:   30-block  1
+        -:   31:
+        1:   32:    corregirViaje(v, errores);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   32-block  1
+call    6 returned 1
+    $$$$$:   32-block  2
+call    7 never executed
+    $$$$$:   32-block  3
+       1*:   33:    EXPECT_EQ(v.size(),res.size());
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   33-block  0
+call    5 returned 1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   33-block  1
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:   33-block  2
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:   33-block  3
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    %%%%%:   33-block  4
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    %%%%%:   33-block  5
+call   20 never executed
+call   21 never executed
+        1:   33-block  6
+call   22 returned 1
+    $$$$$:   33-block  7
+    $$$$$:   33-block  8
+    $$$$$:   33-block  9
+call   23 never executed
+    $$$$$:   33-block 10
+    $$$$$:   33-block 11
+call   24 never executed
+    $$$$$:   33-block 12
+    $$$$$:   33-block 13
+call   25 never executed
+        -:   34:
+       11:   35:    for (int i = 0; i < res.size(); ++i) {
+       11:   35-block  0
+call    0 returned 11
+branch  1 taken 10
+branch  2 taken 1 (fallthrough)
+      10*:   36:        EXPECT_NEAR(obtenerLatitud(obtenerPosicion(v[i])),
+       10:   36-block  0
+call    0 returned 10
+call    1 returned 10
+branch  2 taken 10 (fallthrough)
+branch  3 taken 0 (throw)
+       10:   36-block  1
+call    4 returned 10
+branch  5 taken 10 (fallthrough)
+branch  6 taken 0 (throw)
+       10:   36-block  2
+call    7 returned 10
+call    8 returned 10
+branch  9 taken 10 (fallthrough)
+branch 10 taken 0 (throw)
+       10:   36-block  3
+call   11 returned 10
+branch 12 taken 10 (fallthrough)
+branch 13 taken 0 (throw)
+       10:   36-block  4
+call   14 returned 10
+branch 15 taken 10 (fallthrough)
+branch 16 taken 0 (throw)
+       10:   36-block  5
+call   17 returned 10
+branch 18 taken 0 (fallthrough)
+branch 19 taken 10
+    %%%%%:   36-block  6
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   36-block  7
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   36-block  8
+call   26 never executed
+branch 27 never executed
+branch 28 never executed
+    %%%%%:   36-block  9
+call   29 never executed
+branch 30 never executed
+branch 31 never executed
+    %%%%%:   36-block 10
+call   32 never executed
+call   33 never executed
+    $$$$$:   36-block 11
+    $$$$$:   36-block 12
+    $$$$$:   36-block 13
+call   34 never executed
+    $$$$$:   36-block 14
+    $$$$$:   36-block 15
+call   35 never executed
+    $$$$$:   36-block 16
+       10:   37:                    obtenerLatitud(obtenerPosicion(res[i])), 0.00001);
+       10:   37-block  0
+call    0 returned 10
+    $$$$$:   37-block  1
+call    1 never executed
+      10*:   38:        EXPECT_NEAR(obtenerLongitud(obtenerPosicion(v[i])),
+call    0 returned 10
+call    1 returned 10
+branch  2 taken 10 (fallthrough)
+branch  3 taken 0 (throw)
+       10:   38-block  0
+call    4 returned 10
+branch  5 taken 10 (fallthrough)
+branch  6 taken 0 (throw)
+       10:   38-block  1
+call    7 returned 10
+call    8 returned 10
+branch  9 taken 10 (fallthrough)
+branch 10 taken 0 (throw)
+       10:   38-block  2
+call   11 returned 10
+branch 12 taken 10 (fallthrough)
+branch 13 taken 0 (throw)
+       10:   38-block  3
+call   14 returned 10
+branch 15 taken 10 (fallthrough)
+branch 16 taken 0 (throw)
+       10:   38-block  4
+call   17 returned 10
+branch 18 taken 0 (fallthrough)
+branch 19 taken 10
+    %%%%%:   38-block  5
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   38-block  6
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   38-block  7
+call   26 never executed
+branch 27 never executed
+branch 28 never executed
+    %%%%%:   38-block  8
+call   29 never executed
+branch 30 never executed
+branch 31 never executed
+    %%%%%:   38-block  9
+call   32 never executed
+call   33 never executed
+    $$$$$:   38-block 10
+    $$$$$:   38-block 11
+    $$$$$:   38-block 12
+call   34 never executed
+    $$$$$:   38-block 13
+    $$$$$:   38-block 14
+call   35 never executed
+    $$$$$:   38-block 15
+       10:   39:                    obtenerLongitud(obtenerPosicion(res[i])), 0.00001);
+       10:   39-block  0
+call    0 returned 10
+    $$$$$:   39-block  1
+call    1 never executed
+      10*:   40:        EXPECT_EQ(obtenerTiempo(v[i]),obtenerTiempo(res[i]));
+call    0 returned 10
+call    1 returned 10
+branch  2 taken 10 (fallthrough)
+branch  3 taken 0 (throw)
+       10:   40-block  0
+call    4 returned 10
+call    5 returned 10
+branch  6 taken 10 (fallthrough)
+branch  7 taken 0 (throw)
+       10:   40-block  1
+call    8 returned 10
+branch  9 taken 10 (fallthrough)
+branch 10 taken 0 (throw)
+       10:   40-block  2
+call   11 returned 10
+branch 12 taken 0 (fallthrough)
+branch 13 taken 10
+    %%%%%:   40-block  3
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    %%%%%:   40-block  4
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    %%%%%:   40-block  5
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   40-block  6
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   40-block  7
+call   26 never executed
+call   27 never executed
+       10:   40-block  8
+call   28 returned 10
+    $$$$$:   40-block  9
+    $$$$$:   40-block 10
+    $$$$$:   40-block 11
+call   29 never executed
+    $$$$$:   40-block 12
+    $$$$$:   40-block 13
+call   30 never executed
+    $$$$$:   40-block 14
+    $$$$$:   40-block 15
+call   31 never executed
+        -:   41:    }
+        1:   42:}
+        1:   42-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:   42-block  1
+call    3 never executed
+    $$$$$:   42-block  2
+call    4 never executed
+    $$$$$:   42-block  3
+call    5 never executed
+------------------
+_ZN34corregirViajeTESTGP_faltanDos_TestC1Ev:
+function _ZN34corregirViajeTESTGP_faltanDos_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:    8:TEST(corregirViajeTESTGP, faltanDos){
+        1:    8-block  0
+call    0 returned 1
+------------------
+        -:   43:
+        -:   44:
+        2:   45:TEST(corregirViajeTESTGP, faltanConsecutivos){
+        1:   46:    viaje v = {medicion(T0+0, puntoGps(-34.588910, -58.405075)),
+        1:   47:               medicion(T0+30, puntoGps(-34.591586, -58.401064)),
+        1:   48:               medicion(T0+494, puntoGps(-34.563746, -58.436637)),
+        1:   49:               medicion(T0+999, puntoGps(-34.549657, -58.437327)),
+        1:   50:               medicion(T0+92, puntoGps(-34.594553, -58.402426)),
+        1:   51:               medicion(T0+65, puntoGps(-34.590787, -58.402222)),
+        1:   52:               medicion(T0+230, puntoGps(-34.584572, -58.416942)),
+        1:   53:               medicion(T0+873, puntoGps(-38, -100)),
+        1:   54:               medicion(T0+675, puntoGps(-399, 0)),
+        9:   55:               medicion(T0+1051, puntoGps(-34.545704, -58.441383))};
+        -:   56:
+        1:   57:    viaje res = {medicion(T0+0, puntoGps(-34.588910, -58.405075)),
+        1:   58:                 medicion(T0+30, puntoGps(-34.591586, -58.401064)),
+        1:   59:                 medicion(T0+494, puntoGps(-34.563746, -58.436637)),
+        1:   60:                 medicion(T0+999, puntoGps(-34.549657, -58.437327)),
+        1:   61:                 medicion(T0+92, puntoGps(-34.594553, -58.402426)),
+        1:   62:                 medicion(T0+65, puntoGps(-34.590787, -58.402222)),
+        1:   63:                 medicion(T0+230, puntoGps(-34.584572, -58.416942)),
+        1:   64:                 medicion(T0+873, puntoGps(-34.559236, -58.427499)),
+        1:   65:                 medicion(T0+675, puntoGps(-34.55869627920, -58.43688430)),
+        9:   66:                 medicion(T0+1051, puntoGps(-34.545704, -58.441383))};
+        1:   67:    vector<tiempo> errores = {T0+873,T0+675};
+        -:   68:
+        1:   69:    corregirViaje(v, errores);
+       1*:   70:    EXPECT_EQ(v.size(),res.size());
+        -:   71:
+       11:   72:    for (int i = 0; i < res.size(); ++i) {
+      10*:   73:        EXPECT_NEAR(obtenerLatitud(obtenerPosicion(v[i])),
+       10:   74:                    obtenerLatitud(obtenerPosicion(res[i])), 0.00001);
+      10*:   75:        EXPECT_NEAR(obtenerLongitud(obtenerPosicion(v[i])),
+       10:   76:                    obtenerLongitud(obtenerPosicion(res[i])), 0.00001);
+      10*:   77:        EXPECT_EQ(obtenerTiempo(v[i]),obtenerTiempo(res[i]));
+        -:   78:    }
+        1:   79:}
+------------------
+_ZN43corregirViajeTESTGP_faltanConsecutivos_Test8TestBodyEv:
+function _ZN43corregirViajeTESTGP_faltanConsecutivos_Test8TestBodyEv called 1 returned 100% blocks executed 39%
+        1:   45:TEST(corregirViajeTESTGP, faltanConsecutivos){
+        1:   46:    viaje v = {medicion(T0+0, puntoGps(-34.588910, -58.405075)),
+        1:   46-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   46-block  1
+        1:   47:               medicion(T0+30, puntoGps(-34.591586, -58.401064)),
+        1:   47-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   47-block  1
+        1:   48:               medicion(T0+494, puntoGps(-34.563746, -58.436637)),
+        1:   48-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   48-block  1
+        1:   49:               medicion(T0+999, puntoGps(-34.549657, -58.437327)),
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   49-block  1
+        1:   50:               medicion(T0+92, puntoGps(-34.594553, -58.402426)),
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   50-block  1
+        1:   51:               medicion(T0+65, puntoGps(-34.590787, -58.402222)),
+        1:   51-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   51-block  1
+        1:   52:               medicion(T0+230, puntoGps(-34.584572, -58.416942)),
+        1:   52-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   52-block  1
+        1:   53:               medicion(T0+873, puntoGps(-38, -100)),
+        1:   53-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   53-block  1
+        1:   54:               medicion(T0+675, puntoGps(-399, 0)),
+        1:   54-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   54-block  1
+        9:   55:               medicion(T0+1051, puntoGps(-34.545704, -58.441383))};
+        1:   55-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   55-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   55-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   55-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   55-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   55-block  5
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   55-block  6
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0 (throw)
+        1:   55-block  7
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:   55-block  8
+call   24 returned 1
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0 (throw)
+        1:   55-block  9
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0 (throw)
+        1:   55-block 10
+call   30 returned 1
+branch 31 taken 1 (fallthrough)
+branch 32 taken 0 (throw)
+        1:   55-block 11
+call   33 returned 1
+call   34 returned 1
+branch 35 taken 1 (fallthrough)
+branch 36 taken 0 (throw)
+    $$$$$:   55-block 12
+    $$$$$:   55-block 13
+    $$$$$:   55-block 14
+        -:   56:
+        1:   57:    viaje res = {medicion(T0+0, puntoGps(-34.588910, -58.405075)),
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   57-block  0
+        1:   58:                 medicion(T0+30, puntoGps(-34.591586, -58.401064)),
+        1:   58-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   58-block  1
+        1:   59:                 medicion(T0+494, puntoGps(-34.563746, -58.436637)),
+        1:   59-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   59-block  1
+        1:   60:                 medicion(T0+999, puntoGps(-34.549657, -58.437327)),
+        1:   60-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   60-block  1
+        1:   61:                 medicion(T0+92, puntoGps(-34.594553, -58.402426)),
+        1:   61-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   61-block  1
+        1:   62:                 medicion(T0+65, puntoGps(-34.590787, -58.402222)),
+        1:   62-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   62-block  1
+        1:   63:                 medicion(T0+230, puntoGps(-34.584572, -58.416942)),
+        1:   63-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   63-block  1
+        1:   64:                 medicion(T0+873, puntoGps(-34.559236, -58.427499)),
+        1:   64-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   64-block  1
+        1:   65:                 medicion(T0+675, puntoGps(-34.55869627920, -58.43688430)),
+        1:   65-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   65-block  1
+        9:   66:                 medicion(T0+1051, puntoGps(-34.545704, -58.441383))};
+        1:   66-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   66-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   66-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   66-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   66-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   66-block  5
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   66-block  6
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0 (throw)
+        1:   66-block  7
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:   66-block  8
+call   24 returned 1
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0 (throw)
+        1:   66-block  9
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0 (throw)
+        1:   66-block 10
+call   30 returned 1
+branch 31 taken 1 (fallthrough)
+branch 32 taken 0 (throw)
+        1:   66-block 11
+call   33 returned 1
+call   34 returned 1
+branch 35 taken 1 (fallthrough)
+branch 36 taken 0 (throw)
+    $$$$$:   66-block 12
+    $$$$$:   66-block 13
+    $$$$$:   66-block 14
+        1:   67:    vector<tiempo> errores = {T0+873,T0+675};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   67-block  0
+    $$$$$:   67-block  1
+        -:   68:
+        1:   69:    corregirViaje(v, errores);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   69-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   69-block  1
+call    6 returned 1
+    $$$$$:   69-block  2
+call    7 never executed
+    $$$$$:   69-block  3
+       1*:   70:    EXPECT_EQ(v.size(),res.size());
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   70-block  0
+call    5 returned 1
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   70-block  1
+call    8 never executed
+branch  9 never executed
+branch 10 never executed
+    %%%%%:   70-block  2
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    %%%%%:   70-block  3
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    %%%%%:   70-block  4
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    %%%%%:   70-block  5
+call   20 never executed
+call   21 never executed
+        1:   70-block  6
+call   22 returned 1
+    $$$$$:   70-block  7
+    $$$$$:   70-block  8
+    $$$$$:   70-block  9
+call   23 never executed
+    $$$$$:   70-block 10
+    $$$$$:   70-block 11
+call   24 never executed
+    $$$$$:   70-block 12
+    $$$$$:   70-block 13
+call   25 never executed
+        -:   71:
+       11:   72:    for (int i = 0; i < res.size(); ++i) {
+       11:   72-block  0
+call    0 returned 11
+branch  1 taken 10
+branch  2 taken 1 (fallthrough)
+      10*:   73:        EXPECT_NEAR(obtenerLatitud(obtenerPosicion(v[i])),
+       10:   73-block  0
+call    0 returned 10
+call    1 returned 10
+branch  2 taken 10 (fallthrough)
+branch  3 taken 0 (throw)
+       10:   73-block  1
+call    4 returned 10
+branch  5 taken 10 (fallthrough)
+branch  6 taken 0 (throw)
+       10:   73-block  2
+call    7 returned 10
+call    8 returned 10
+branch  9 taken 10 (fallthrough)
+branch 10 taken 0 (throw)
+       10:   73-block  3
+call   11 returned 10
+branch 12 taken 10 (fallthrough)
+branch 13 taken 0 (throw)
+       10:   73-block  4
+call   14 returned 10
+branch 15 taken 10 (fallthrough)
+branch 16 taken 0 (throw)
+       10:   73-block  5
+call   17 returned 10
+branch 18 taken 0 (fallthrough)
+branch 19 taken 10
+    %%%%%:   73-block  6
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   73-block  7
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   73-block  8
+call   26 never executed
+branch 27 never executed
+branch 28 never executed
+    %%%%%:   73-block  9
+call   29 never executed
+branch 30 never executed
+branch 31 never executed
+    %%%%%:   73-block 10
+call   32 never executed
+call   33 never executed
+    $$$$$:   73-block 11
+    $$$$$:   73-block 12
+    $$$$$:   73-block 13
+call   34 never executed
+    $$$$$:   73-block 14
+    $$$$$:   73-block 15
+call   35 never executed
+    $$$$$:   73-block 16
+       10:   74:                    obtenerLatitud(obtenerPosicion(res[i])), 0.00001);
+       10:   74-block  0
+call    0 returned 10
+    $$$$$:   74-block  1
+call    1 never executed
+      10*:   75:        EXPECT_NEAR(obtenerLongitud(obtenerPosicion(v[i])),
+call    0 returned 10
+call    1 returned 10
+branch  2 taken 10 (fallthrough)
+branch  3 taken 0 (throw)
+       10:   75-block  0
+call    4 returned 10
+branch  5 taken 10 (fallthrough)
+branch  6 taken 0 (throw)
+       10:   75-block  1
+call    7 returned 10
+call    8 returned 10
+branch  9 taken 10 (fallthrough)
+branch 10 taken 0 (throw)
+       10:   75-block  2
+call   11 returned 10
+branch 12 taken 10 (fallthrough)
+branch 13 taken 0 (throw)
+       10:   75-block  3
+call   14 returned 10
+branch 15 taken 10 (fallthrough)
+branch 16 taken 0 (throw)
+       10:   75-block  4
+call   17 returned 10
+branch 18 taken 0 (fallthrough)
+branch 19 taken 10
+    %%%%%:   75-block  5
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   75-block  6
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   75-block  7
+call   26 never executed
+branch 27 never executed
+branch 28 never executed
+    %%%%%:   75-block  8
+call   29 never executed
+branch 30 never executed
+branch 31 never executed
+    %%%%%:   75-block  9
+call   32 never executed
+call   33 never executed
+    $$$$$:   75-block 10
+    $$$$$:   75-block 11
+    $$$$$:   75-block 12
+call   34 never executed
+    $$$$$:   75-block 13
+    $$$$$:   75-block 14
+call   35 never executed
+    $$$$$:   75-block 15
+       10:   76:                    obtenerLongitud(obtenerPosicion(res[i])), 0.00001);
+       10:   76-block  0
+call    0 returned 10
+    $$$$$:   76-block  1
+call    1 never executed
+      10*:   77:        EXPECT_EQ(obtenerTiempo(v[i]),obtenerTiempo(res[i]));
+call    0 returned 10
+call    1 returned 10
+branch  2 taken 10 (fallthrough)
+branch  3 taken 0 (throw)
+       10:   77-block  0
+call    4 returned 10
+call    5 returned 10
+branch  6 taken 10 (fallthrough)
+branch  7 taken 0 (throw)
+       10:   77-block  1
+call    8 returned 10
+branch  9 taken 10 (fallthrough)
+branch 10 taken 0 (throw)
+       10:   77-block  2
+call   11 returned 10
+branch 12 taken 0 (fallthrough)
+branch 13 taken 10
+    %%%%%:   77-block  3
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    %%%%%:   77-block  4
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    %%%%%:   77-block  5
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    %%%%%:   77-block  6
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    %%%%%:   77-block  7
+call   26 never executed
+call   27 never executed
+       10:   77-block  8
+call   28 returned 10
+    $$$$$:   77-block  9
+    $$$$$:   77-block 10
+    $$$$$:   77-block 11
+call   29 never executed
+    $$$$$:   77-block 12
+    $$$$$:   77-block 13
+call   30 never executed
+    $$$$$:   77-block 14
+    $$$$$:   77-block 15
+call   31 never executed
+        -:   78:    }
+        1:   79:}
+        1:   79-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:   79-block  1
+call    3 never executed
+    $$$$$:   79-block  2
+call    4 never executed
+    $$$$$:   79-block  3
+call    5 never executed
+------------------
+_ZN43corregirViajeTESTGP_faltanConsecutivos_TestC1Ev:
+function _ZN43corregirViajeTESTGP_faltanConsecutivos_TestC1Ev called 1 returned 100% blocks executed 100%
+        1:   45:TEST(corregirViajeTESTGP, faltanConsecutivos){
+        1:   45-block  0
+call    0 returned 1
+------------------
+        -:   80:
+        -:   81:
+        -:   82:
